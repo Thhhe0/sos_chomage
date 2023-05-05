@@ -8,34 +8,39 @@ var cors = require('cors');
 const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/error");
 
-//importe routes
-const authRoutes = require('./routes/authRoutes')
 
-//connexion DB
+
+// import routes
+const authRoutes = require('./routes/authRoutes');
+
+//database connection
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
-}).then(() => console.log("DB connected"))
+})
+    .then(() => console.log("DB connected"))
     .catch((err) => console.log(err));
 
-
-
+//MIDDLEWARE
 app.use(morgan('dev'));
 app.use(bodyParser.json({ limit: "5mb" }));
-app.use(bodyParser.urlencoded({ limit: "5mb", extended: true }));
+app.use(bodyParser.urlencoded({
+    limit: "5mb",
+    extended: true
+}));
 app.use(cookieParser());
 app.use(cors());
 
-//route
 
+//ROUTES MIDDLEWARE
 // app.get('/', (req, res) => {
-//     res.send("Hello World")
+//     res.send("Hello from Node Js");
 // })
-app.use('/api', authRoutes)
+app.use('/api', authRoutes);
 
-//erreur
+// error middleware
 app.use(errorHandler);
 
 //port
