@@ -87,12 +87,12 @@ const SidebarAdm = () => {
                                         <MenuItem component={<Link to="/admin/dashboard" />} icon={<DashboardIcon />}> Dashboard </MenuItem>
                                         <MenuItem component={<Link to="/admin/users" />} icon={<GroupAddIcon />}> Users </MenuItem>
                                         <MenuItem component={<Link to="/admin/jobs" />} icon={<WorkIcon />}> Jobs </MenuItem>
-                                        <MenuItem component={<Link to="/admin/category" />} icon={<CategoryIcon />}> Category </MenuItem>
+                                        <MenuItem component={<Link to="/admin/category" />} icon={<CategoryIcon />}> Catégorie </MenuItem>
                                     </> :
                                     <>
                                         <MenuItem component={<Link to="/user/dashboard" />} icon={<DashboardIcon />}> Dashboard </MenuItem>
-                                        <MenuItem component={<Link to="/user/jobs" />} icon={<WorkHistoryIcon />}> Applied Jobs </MenuItem>
-                                        <MenuItem component={<Link to="/user/info" />} icon={<Person3Icon />}> Personal Info </MenuItem>
+                                        <MenuItem component={<Link to="/user/jobs" />} icon={<WorkHistoryIcon />}> Postuler </MenuItem>
+                                        <MenuItem component={<Link to="/user/info" />} icon={<Person3Icon />}> Info Personel </MenuItem>
                                     </>
                             }
 
@@ -122,7 +122,7 @@ const SidebarAdm = () => {
                                 },
                             }}
                         >
-                            <MenuItem onClick={logOut} icon={<LoginIcon />}>   Log out </MenuItem>
+                            <MenuItem onClick={logOut} icon={<LoginIcon />}>   Déconnexion </MenuItem>
                         </Menu>
                     </Box>
                 </Box>

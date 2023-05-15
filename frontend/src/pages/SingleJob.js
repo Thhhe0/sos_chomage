@@ -52,13 +52,13 @@ const SingleJob = () => {
                                                     {singleJob && singleJob.title}
                                                 </Typography>
                                                 <Typography variant="body2">
-                                                    <Box component="span" sx={{ fontWeight: 700 }}>Salary</Box>: ${singleJob && singleJob.salary}
+                                                    <Box component="span" sx={{ fontWeight: 700 }}>Salaire</Box>: ${singleJob && singleJob.salary}
                                                 </Typography>
                                                 <Typography variant="body2">
-                                                    <Box component="span" sx={{ fontWeight: 700 }}>Category</Box>: {singleJob && singleJob.jobType ? singleJob.jobType.jobTypeName : "No category"}
+                                                    <Box component="span" sx={{ fontWeight: 700 }}>Catégorie</Box>: {singleJob && singleJob.jobType ? singleJob.jobType.jobTypeName : "No category"}
                                                 </Typography>
                                                 <Typography variant="body2">
-                                                    <Box component="span" sx={{ fontWeight: 700 }}>Location</Box>: {singleJob && singleJob.location}
+                                                    <Box component="span" sx={{ fontWeight: 700 }}>Lieu</Box>: {singleJob && singleJob.location}
                                                 </Typography>
                                                 <Typography variant="body2" sx={{ pt: 2 }}>
                                                     {/* <h3>Job description:</h3> */}
@@ -70,7 +70,7 @@ const SingleJob = () => {
                             </Box>
                             <Box sx={{ flex: 1, p: 2 }}>
                                 <Card sx={{ p: 2 }}>
-                                    <Button onClick={applyForAJob} sx={{ fontSize: "13px" }} variant='contained'>Applied for this Job</Button>
+                                    <Button onClick={applyForAJob} sx={{ fontSize: "13px" }} variant='contained'>Postuler pour ce poste</Button>
                                 </Card>
                             </Box>
 

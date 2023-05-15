@@ -100,7 +100,7 @@ const LogIn = () => {
                             helperText={formik.touched.password && formik.errors.password}
                         />
 
-                        <Button fullWidth variant="contained" type='submit' >Log In</Button>
+                        <Button fullWidth variant="contained" type='submit' >Connexion</Button>
                     </Box>
                 </Box>
             </Box>

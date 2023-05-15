@@ -21,7 +21,7 @@ const SelectComponent = ({ handleChangeCategory, cat }) => {
                     label="Category"
                     onChange={handleChangeCategory}
                 >
-                    <MenuItem value="">All</MenuItem>
+                    <MenuItem value="">Tout</MenuItem>
                     {
                         jobType && jobType.map(jt => (
                             <MenuItem key={jt._id} value={jt._id}>{jt.jobTypeName}</MenuItem>

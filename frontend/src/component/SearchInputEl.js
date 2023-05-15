@@ -54,7 +54,7 @@ const SearchInputEl = () => {
                 />
 
                 <Button color="primary" variant="contained" type="submit" disabled={isSubmitting}>
-                    Search
+                    Recherche
                 </Button>
             </Box>
             <Box component='span' sx={{ color: 'orange' }}>{touched.search && errors.search}</Box>

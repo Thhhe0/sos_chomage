@@ -75,7 +75,7 @@ const HeaderTop = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        HR APP
+                        RH APP
                     </Typography>
                     <Search>
                         <SearchIconWrapper>

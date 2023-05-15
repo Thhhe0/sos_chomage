@@ -31,7 +31,7 @@ const CardElement = ({ jobTitle, description, category, location, id }) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button disableElevation variant='contained' size="small" startIcon={<AddIcon />}><Link style={{ textDecoration: "none", color: "white", boxShadow: 0 }} to={`/job/${id}`}>More Details</Link></Button>
+                <Button disableElevation variant='contained' size="small" startIcon={<AddIcon />}><Link style={{ textDecoration: "none", color: "white", boxShadow: 0 }} to={`/job/${id}`}>Détails</Link></Button>
             </CardActions>
         </Card>
     );

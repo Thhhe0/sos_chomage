@@ -51,7 +51,7 @@ const Home = () => {
                             <Card sx={{ minWidth: 150, mb: 3, mt: 3, p: 2 }}>
                                 <Box sx={{ pb: 2 }}>
                                     <Typography component="h4" sx={{ color: palette.secondary.main, fontWeight: 600 }}>
-                                        Filter job by category
+                                        Filtrer par Catégorie
                                     </Typography>
                                 </Box>
                                 <SelectComponent handleChangeCategory={handleChangeCategory} cat={cat} />
@@ -63,7 +63,7 @@ const Home = () => {
                                 <Box sx={{ pb: 2 }}>
                                     {/* <h4>Filter by category</h4> */}
                                     <Typography component="h4" sx={{ color: palette.secondary.main, fontWeight: 600 }}>
-                                        Filter job by location
+                                        Filtrer par Lieu
                                     </Typography>
                                     <MenuList>
                                         {
@@ -97,7 +97,7 @@ const Home = () => {
                                                     alignItems: 'center'
                                                 }}>
 
-                                                <h2>No result found!</h2>
+                                                <h2>Pas de résultat!</h2>
                                             </Box>
                                         </> :
 
