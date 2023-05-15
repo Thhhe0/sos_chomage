@@ -1,9 +1,9 @@
 const User = require('../models/userModel');
 const ErrorResponse = require('../utils/errorResponse');
 
-//chargement des users
+//load all users
 exports.allUsers = async (req, res, next) => {
-    //pagination
+    //enable pagination
     const pageSize = 10;
     const page = Number(req.query.pageNumber) || 1;
     const count = await User.find({}).estimatedDocumentCount();
@@ -28,7 +28,6 @@ exports.allUsers = async (req, res, next) => {
 }
 
 //show single user
-
 exports.singleUser = async (req, res, next) => {
     try {
         const user = await User.findById(req.params.id);
@@ -42,6 +41,7 @@ exports.singleUser = async (req, res, next) => {
         return next(error);
     }
 }
+
 
 //edit user
 exports.editUser = async (req, res, next) => {
@@ -72,3 +72,42 @@ exports.deleteUser = async (req, res, next) => {
         return next(error);
     }
 }
+
+
+//jobs history
+exports.createUserJobsHistory = async (req, res, next) => {
+    const { title, description, salary, location } = req.body;
+
+    try {
+        const currentUser = await User.findOne({ _id: req.user._id });
+        if (!currentUser) {
+            return next(new ErrorResponse("You must log In", 401));
+        } else {
+            const addJobHistory = {
+                title,
+                description,
+                salary,
+                location,
+                user: req.user._id
+            }
+            currentUser.jobsHistory.push(addJobHistory);
+            await currentUser.save();
+        }
+
+        res.status(200).json({
+            success: true,
+            currentUser
+        })
+        next();
+
+    } catch (error) {
+        return next(error);
+    }
+}
+
+
+
+
+
+
+
